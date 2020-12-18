@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body class = "secondary">
+    <!-- <div class="container">
+        <div class="card">
+            <p class="msg"></p>
+            <div class="display" id="login">
+                <form>
+                    <div class="input-group">
+                        <label for="pInput" class="input-group-text"> Open Existing Account:</label>
+                        <input type="text" class = "form-control" id="pInout">
+                        <button id="pinIn" class = "btn btn-outline-secondary" onclick = "login()">Submit</button>
+                    </div>
+                    <div class="input-group">
+                        <label for="newPin" class="input-group-text">Create New Account:</label>
+                        <input type="text" id="newPin" class = "form-control">
+                        <button id="newPinput" class = "btn  btn-outline-secondary" onclick="newAccount()">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> -->
+<div class="container">
+    <div class="card">
+        <p class="msgBox"></p>
+        <form class="px-4 py-3" style = "display:none;">
+            <div class="mb-3">
+                <label for="pinPut" class="form-label">Existing Account</label>
+                <div class="input-group">
+                    <input type="email" class="form-control" id="pinPut">
+                    <button type="button" class="btn btn-warning">Submit</button>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="newPin" class="form-label mt-3">Create New Account</label>
+                <div class="input-group">
+                    <input type="password" class="form-control" id="newPin">
+                    <button type="button" class="btn btn-warning">Submit</button>
+                </div>
+            </div>
+        </form>
+        <!-- section for deposit and withdrawal -->
+        <form>
+            <div class="mb-3">
+                <label for="newAccPin" id = "depoWithdWarning" class="form-label mt-3">this are the warning</label>
+                <div class="input-group">
+                    <input type="password" class="form-control" id="newAccPin">
+                    <button type="button" class="btn btn-warning">Submit</button>
+                </div>
+            </div>
+        </form>
+        <div id = "accountMenu" role = "group" class="btn-group">
+            <button type="button" class="btn btn-warning active">Balance</button>
+            <button type="button" class="btn btn-warning">Deposit</button>
+            <button type="button" class="btn btn-warning">Withdraw</button>
+            <button type="button" class="btn btn-warning">Change Pin</button>
+            <button type="button" class="btn btn-warning">Logout</button>
+        </div>
+    </div>
+</div>
+
+    <script src = "app.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>

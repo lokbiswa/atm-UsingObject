@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  font-family: "Courier New", Courier, monospace;
+  color: black;
+}
+body {
+  background: rgb(53, 53, 53) !important;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: transparent;
+}
+.card {
+  position: relative;
+  display: block;
+  min-width: 30rem;
+  max-width: 45rem;
+  padding: 3rem 3rem 0 3rem;
+  background: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  margin: auto;
+}
+#depoWithdWarning {
+  color: rgb(255, 62, 62);
+}
+.btn-group {
+  margin-top: 5rem;
+  align-items: center;
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+.btn {
+  font-family: roboto;
+  display: block;
+  min-width: 7rem;
+}
+.btn:focus,
+input:focus {
+  box-shadow: none !important;
+  outline: none;
+}
