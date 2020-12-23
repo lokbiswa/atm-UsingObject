@@ -79,7 +79,7 @@ function Atm(){
 }
 
 //change current tab
-function ActiveObject(){
+function ActiveTab(){
   let buttonGroup = document.getElementById("accountMenu");
   let buttons = buttonGroup.getElementsByClassName("btn-outline-dark");
   let button =  document.getElementById("login");
@@ -131,4 +131,4 @@ function ActiveObject(){
     });
   }
 }
-ActiveObject()
+ActiveTab()
