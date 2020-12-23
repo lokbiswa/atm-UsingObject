@@ -81,7 +81,7 @@ function Atm(){
 //change current tab
 function ActiveObject(){
   let buttonGroup = document.getElementById("accountMenu");
-  let buttons = buttonGroup.getElementsByClassName("btn-warning");
+  let buttons = buttonGroup.getElementsByClassName("btn-outline-dark");
   let button =  document.getElementById("login");
   //current tab is shaded in different color.
   for(i = 0; i < buttons.length; i++){
@@ -105,7 +105,7 @@ function ActiveObject(){
             atm.show("accountMenu");
             atm.displayMgs("title", "Withdrawal")
             atm.clearMsg("msgBox")
-            atm.displayMgs("amount", "Enter Amount")
+            atm.displayMgs("label", "Enter Amount")
           }
           else if (this == document.getElementById("deposit")){
             atm.hide("login");
@@ -114,7 +114,7 @@ function ActiveObject(){
             atm.show("accountMenu");
             atm.displayMgs("title", "Deposit")
             atm.clearMsg("msgBox")
-            atm.displayMgs("amount", "Enter Amount")
+            atm.displayMgs("label", "Enter Amount")
           }
           else if (this == document.getElementById("changePin")){
             atm.hide("login");
@@ -123,7 +123,7 @@ function ActiveObject(){
             atm.show("accountMenu");
             atm.displayMgs("title", "Change Pin")
             atm.clear("msgBox")
-            atm.displayMgs("amount", "Enter New Pin")
+            atm.displayMgs("label", "Enter New Pin")
           }
           else if (this == document.getElementById("logout")){
             location.reload()

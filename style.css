@@ -1,32 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
   font-family: "roboto";
-  color: black;
+  margin: 0;
+  padding: 0;
 }
 body {
-  background: rgb(53, 53, 53) !important;
-}
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
-  background: transparent;
+}
+.container-fluid {
+  height: 70vh !important;
+  padding-top: 10rem;
 }
 .card {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding-top: 3rem;
+  display: flex;
+  max-width: 40rem;
+  height: fit-content;
   background: #212529;
   text-align: left;
-  list-style: none;
+  padding: 3rem;
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
-  margin: auto;
+  margin: 0 auto;
 }
 form {
   padding: 2rem;
@@ -34,10 +30,19 @@ form {
 #depoWithdWarning {
   color: rgb(255, 62, 62);
 }
+.buttons {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  width: 80%;
+  margin: 0 10% 0 10%;
+}
 .btn-group {
-  bottom: 0;
-  align-items: center;
-  display: inline-flex;
+  display: flex !important;
+  flex-wrap: wrap;
+  position: static;
+  margin-left: auto;
+  margin-right: auto;
 }
 .btn {
   font-family: roboto;
@@ -52,12 +57,15 @@ input:focus {
 .menuItem {
   border-radius: 0 !important;
 }
-.menuItem:hover {
+.form-control {
+  border-color: #212529;
+}
+/* .menuItem:hover {
   background: #ffd24c !important;
-}
-.active {
+} */
+/* .active {
   background: #f6d46b !important;
-}
+} */
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
   font-size: 1.25rem;
