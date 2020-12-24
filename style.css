@@ -10,15 +10,15 @@
 }
 body {
   height: 100vh;
-  background: white;
+  background: rgb(255, 255, 255);
 }
 .container-fluid {
-  height: 70vh !important;
-  padding-top: 10rem;
+  display: flex;
+  height: 100vh !important;
 }
 .card {
-  display: flex;
-  max-width: 40rem;
+  display: block;
+  width: fit-content;
   min-height: 20rem;
   height: fit-content;
   text-align: center;
@@ -26,7 +26,7 @@ body {
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
-  margin: 0 auto;
+  margin: auto;
   background: transparent;
   transition: 500ms ease-in-out;
 }
@@ -136,4 +136,13 @@ label {
 #balanceDis {
   text-align: center;
   padding: 0;
+}
+#login {
+  max-width: 25rem;
+}
+@media (min-width: 582px) {
+  #balanceDis,
+  #epositWithdrawal {
+    min-width: 25rem;
+  }
 }

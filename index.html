@@ -10,20 +10,20 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="card">
+        <div class="card my-auto">
             <p id="msgBox"></p>
             <!-- login and account create -->
-            <form id= "login" class="px-4 py-3">
+            <form id= "login" class="px-4 py-4">
                 <p id= "welcomeMsg"><span id = "hello">Hello!<br/></span>WELCOME TO ATM SIMULATOR</p>
                 <div class="mb-1">
-                    <label for="pinPut" class="form-label">Existing Account</label>
+                    <label for="pinPut" class="form-label">Enter Account Pin</label>
                     <input type="password" class="form-control" id="pinPut">
-                    <button id = "submitPin" type="button" class="btn m-3 submit">Submit</button>
+                    <button id = "submitPin" type="button" class="btn m-3 submit">Login</button>
                 </div>
                 <div class="mb-3">
-                    <label for="newAccPin" class="form-label mt-3">Create New Account</label>
+                    <label for="newAccPin" class="form-label mt-3">Create A New Pin</label>
                     <input type="password" class="form-control" id="newAccPin">
-                    <button id = "submitNewPin" type="button" class="btn m-3 submit">Submit</button>
+                    <button id = "submitNewPin" type="button" class="btn m-3 submit">Creat Pin</button>
                 </div>
             </form>
             <!-- section for deposit and withdrawal -->
@@ -43,8 +43,8 @@
             </form>
             <!-- account menu -->
         </div>
-        <div class="buttons">
-            <div id="accountMenu" role="group" class="btn-group" style="display:block;">
+        <div class="buttons" style="display:none;">
+            <div id="accountMenu" role="group" class="btn-group">
                 <button type="button" id="balance" class="btn  menuItem active">Balance</button>
                 <button type="button" id="deposit" class="btn  menuItem">Deposit</button>
                 <button type="button" id="withdraw" class="btn  menuItem">Withdraw</button>
