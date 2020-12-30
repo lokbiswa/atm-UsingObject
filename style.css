@@ -1,17 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-/* declear colors */
+
 * {
   font-family: "roboto";
   margin: 0;
   padding: 0;
   color: #1e2749;
 }
+/* using the whole page */
 body {
   height: 100vh;
   background: rgb(255, 255, 255);
 }
+/* so that comtaine covers page */
 .container-fluid {
   display: flex;
   height: 100vh !important;
@@ -33,9 +35,7 @@ body {
 form {
   padding: 2rem;
 }
-#depoWithdWarning {
-  color: rgb(255, 62, 62);
-}
+/* placing accountMenu to buttom */
 .buttons {
   position: absolute;
   bottom: 2rem;
@@ -43,6 +43,7 @@ form {
   width: 80%;
   margin: 0 10% 0 10%;
 }
+/* centering accountMenu */
 .btn-group {
   display: flex !important;
   flex-wrap: wrap;
@@ -142,7 +143,16 @@ label {
 }
 @media (min-width: 582px) {
   #balanceDis,
-  #epositWithdrawal {
+  #depositWithdrawal {
     min-width: 25rem;
   }
+  .menuItem {
+    width: 8% !important;
+  }
+}
+.icons {
+  height: 40px;
+  width: auto;
+  display: block;
+  margin: auto;
 }
