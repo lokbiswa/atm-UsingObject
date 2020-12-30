@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM SIMULATOR</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="card my-auto">
+            <p id="msgBox"></p>
+            <!-- login and account create -->
+            <form id= "login" class="px-4 py-4">
+                <p id= "welcomeMsg"><span id = "hello">Hello!<br/></span>WELCOME TO ATM SIMULATOR</p>
+                <div class="mb-1">
+                    <label for="pinPut" class="form-label">Enter Account Pin</label>
+                    <input type="password" class="form-control" id="pinPut">
+                    <button id = "submitPin" type="button" class="btn m-3 submit" onclick="atm.createAccount()">Login</button>
+                </div>
+                <div class="mb-3">
+                    <label for="newAccPin" class="form-label mt-3">Create A New Pin</label>
+                    <input type="password" class="form-control" id="newAccPin">
+                    <button id = "submitNewPin" type="button" class="btn m-3 submit" onclick="atm.getAccount()">Creat Pin</button>
+                </div>
+            </form>
+            <!-- section for deposit and withdrawal change pin-->
+            <form id = "depositWithdrawal" style ="display:none;">
+                <p id = "title">Withdrawal</p>
+                <div class="mb-4">
+                    <label for="newAccPin" id="label" class="form-label mt-3">Enter Amount</label>
+                    <input type="text" class="form-control" id="value">
+                    <button type="button" id ="depositButton" class="btn m-3  submit" onclick= "atm.currentAccount.deposit()" >Submit</button>
+                    <button type="button" id = "withdrawalButton" class="btn m-3  submit" onclick= "atm.currentAccount.withdrawal()" >Submit</button>
+                    <button type="button" id = "changePinButton" class="btn m-3  submit" onclick = "atm.currentAccount.changePin()">Change</button>
+                </div>
+            </form>
+            <!-- Balance tab-->
+            <form id = "balanceDis" style = "display:none;">
+                <div class="mb-3" >
+                    <h5>Current Balance:<br/><span id = "balanceAmount">$900</span></h5>
+                </div>
+            </form>
+        </div>
+        <!-- account menu -->
+        <div class="buttons" id = "navbar" style="display:none;">
+            <div id="accountMenu" role="group" class="btn-group">
+                <button type="button"  value = '0' id="balance" class="btn  menuItem active">Balance</button>
+                <button type="button" value = '1' id="deposit" class="btn  menuItem"> Deposit</button>
+                <button type="button" value = '2' id="withdraw" class="btn  menuItem">Withdraw</button>
+                <button type="button" value = '3' id="changePin" class="btn menuItem">Change Pin</button>
+                <button type="button" value = '4' id="logout" class="btn menuItem">Logout</button>
+            </div>
+        </div>
+    </div>
+    <script src = "app.js"></script>
+</body>
+</html>
