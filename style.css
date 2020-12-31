@@ -35,21 +35,30 @@ body {
 form {
 	padding: 2rem;
 }
-/* placing accountMenu to buttom */
-.buttons {
+.navContainer {
 	position: absolute;
+	display: flex;
 	bottom: 2rem;
 	left: 0;
-	width: 80%;
-	margin: 0 10% 0 10%;
+	width: 100%;
+	margin: auto;
 }
-/* centering accountMenu */
-.btn-group {
-	display: flex !important;
+/* placing accountMenu to buttom */
+#accountMenu {
+	position: relative;
+	display: inline-flex;
 	flex-wrap: wrap;
-	position: static;
-	margin-left: auto;
-	margin-right: auto;
+	width: 80%;
+	list-style: none;
+	margin: auto;
+}
+ul li {
+	width: 20%;
+	min-width: 7rem !important;
+}
+a {
+	display: block;
+	width: 100%;
 }
 .btn {
 	font-family: roboto;
@@ -57,6 +66,13 @@ form {
 	border-color: #1e2749 !important;
 	color: #273469 !important;
 	transition: 500ms ease-in-out;
+	background: white !important;
+	border-radius: 0 !important;
+}
+.btn-group-vertical > .btn,
+.btn-group > .btn {
+	position: relative;
+	flex: 1 1 auto;
 }
 .btn:hover {
 	background: #1e2749 !important;
@@ -82,9 +98,6 @@ input:focus {
 .submit {
 	width: 100%;
 	margin: 2rem 0 0 0 !important;
-}
-.menuItem {
-	border-radius: 0 !important;
 }
 .form-control {
 	border-color: #212529;
@@ -140,15 +153,6 @@ label {
 }
 #login {
 	max-width: 25rem;
-}
-@media (min-width: 582px) {
-	#balanceDis,
-	#depositWithdrawal {
-		min-width: 25rem;
-	}
-	.menuItem {
-		width: 8% !important;
-	}
 }
 .icons {
 	height: 40px;
