@@ -42,8 +42,8 @@ function Atm(){
   //loging in 
   this.getAccount= function(){
     this.account.exist = false;
-    this.validate(pin);
     let pin = document.getElementById("pinPut").value
+    this.validate(pin);
     if(isNaN(parseInt(pin))){
         atm.displayMgs("msgBox", "Invalid Pin!");
       }
@@ -52,6 +52,7 @@ function Atm(){
       //work around, because JSON.strigify strips all the methods, so this adds them back. 
       this.currentAccount = new Account(accounts[location].pin, accounts[location].balance);
       this.clearMsg("msgBox");
+      this.balanceTab()
     }
     else if(this.account.exist == false){
       this.displayMgs("msgBox", "Invalid Pin");
@@ -59,10 +60,11 @@ function Atm(){
   }
   // need to check if account already exist, will also track the location if it exists. 
   this.validate = function(pin){
-    for(i = 0; i <accounts.length; i++){
-      if(pin == accounts[i].pin){
+    for(let [index, account] of accounts.entries()){
+      if(pin == account.pin){
         atm.account.exist = true;
-        atm.account.index = i;
+        atm.account.index = index;
+        return;
       }
     }
   }
@@ -118,6 +120,7 @@ class Account{
   }
   deposit(){
     let amount = document.getElementById("value").value;
+    document.getElementById("msgBox").style = "color:red"
     amount = parseInt(amount)
     if(isNaN(amount)){
       atm.displayMgs("msgBox", "Enter Numbers only")
@@ -128,12 +131,14 @@ class Account{
     else{
       this.balance += amount;
       atm.displayMgs("msgBox", `Your new balance is: $${this.balance}`)
+      document.getElementById("msgBox").style = "color:#1e2749"
       atm.updateLocalStor(); 
       atm.clearInput("value");
     } 
   }
   withdrawal(){
     let amount = document.getElementById("value").value;
+    document.getElementById("msgBox").style = "color:red"
     amount = parseInt(amount)
     if(isNaN(amount)){
       atm.displayMgs("msgBox", "Enter Numbers only")
@@ -147,6 +152,7 @@ class Account{
     else{
       this.balance -= parseInt(amount);
       atm.displayMgs("msgBox", `Your new balance is: $${this.balance}`)
+      document.getElementById("msgBox").style = "color:#1e2749"
       atm.updateLocalStor();
       atm.clearInput("value");
     } 
@@ -154,6 +160,7 @@ class Account{
   changePin(){
     atm.account.exist = false;
     let pin = document.getElementById("value").value;
+    document.getElementById("msgBox").style = "color:red"
     atm.validate(pin)
     if(isNaN(parseInt(pin))){
       atm.displayMgs("msgBox", "Pin can only be numbers");
@@ -165,6 +172,7 @@ class Account{
       atm.updateLocalStor();
       this.pin = pin
       atm.displayMgs("msgBox", `Your New Pin is: ${this.pin}`);
+      document.getElementById("msgBox").style = "color:#1e2749"
       atm.updateLocalStor();
     }
   }
