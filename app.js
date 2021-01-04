@@ -44,7 +44,6 @@ function Atm(){
     this.account.exist = false;
     let pin = document.getElementById("pinPut").value
     this.validate(pin);
-    console.log(atm.account.exist);
     if(isNaN(parseInt(pin))){
         atm.displayMgs("msgBox", "Invalid Pin!");
       }
@@ -61,9 +60,7 @@ function Atm(){
   }
   // need to check if account already exist, will also track the location if it exists. 
   this.validate = function(pin){
-    console.log(accounts)
     for(let [index, account] of accounts.entries()){
-      console.log(account.pin, index)
       if(pin == account.pin){
         atm.account.exist = true;
         atm.account.index = index;
