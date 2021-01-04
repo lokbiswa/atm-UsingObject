@@ -120,15 +120,16 @@ class Account{
   }
   deposit(){
     let amount = document.getElementById("value").value;
-    document.getElementById("msgBox").style = "color:red"
-    amount = parseInt(amount)
+    document.getElementById("msgBox").style = "color:red";
+    amount = parseInt(amount);
     if(isNaN(amount)){
-      atm.displayMgs("msgBox", "Enter Numbers only")
+      atm.displayMgs("msgBox", "Enter amount")
+      console.log(isNaN(amount));
     }
-   if(amount < 0 ){
+    else if(amount < 0 ){
       atm.displayMgs("msgBox", "Amout cannot be less then 0")
     }
-    else{
+    else if( isNaN(amount)===false) {
       this.balance += amount;
       atm.displayMgs("msgBox", `Your new balance is: $${this.balance}`)
       document.getElementById("msgBox").style = "color:#1e2749"
@@ -141,7 +142,7 @@ class Account{
     document.getElementById("msgBox").style = "color:red"
     amount = parseInt(amount)
     if(isNaN(amount)){
-      atm.displayMgs("msgBox", "Enter Numbers only")
+      atm.displayMgs("msgBox", "Enter amount")
     }
     else if(amount < 0 ){
       atm.displayMgs("msgBox", "Amout cannot be less then 0")
