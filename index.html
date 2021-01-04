@@ -18,12 +18,12 @@
                 <div class="mb-1">
                     <label for="pinPut" class="form-label">Enter Account Pin</label>
                     <input type="password" class="form-control" id="pinPut">
-                    <button id = "submitPin" type="button" class="btn m-3 submit" onclick="atm.createAccount()">Login</button>
+                    <button id = "submitPin" type="button" class="btn m-3 submit" onclick="atm.atm.getAccount()">Login</button>
                 </div>
                 <div class="mb-3">
                     <label for="newAccPin" class="form-label mt-3">Create A New Pin</label>
                     <input type="password" class="form-control" id="newAccPin">
-                    <button id = "submitNewPin" type="button" class="btn m-3 submit" onclick="atm.getAccount()">Creat Pin</button>
+                    <button id = "submitNewPin" type="button" class="btn m-3 submit" onclick="atm.createAccount()">Creat Pin</button>
                 </div>
             </form>
             <!-- section for deposit and withdrawal change pin-->
